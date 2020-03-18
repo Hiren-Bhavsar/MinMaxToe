@@ -1,0 +1,17 @@
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.csprojAssemblyReference.cache
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe_MarkupCompile.cache
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe_MarkupCompile.lref
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.exe
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.deps.json
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.runtimeconfig.json
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.runtimeconfig.dev.json
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.dll
+C:\Users\bhavs\source\repos\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.pdb
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.g.resources
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.AssemblyInfoInputs.cache
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.AssemblyInfo.cs
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.dll
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.pdb
