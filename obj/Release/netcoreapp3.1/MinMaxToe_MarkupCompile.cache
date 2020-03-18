@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Release\netcoreapp3.1\
 MinMaxToe
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1
 C:\Users\bhavs\source\repos\MinMaxToe\App.xaml
 3-1835703300
 
-6110715059
+5-1877133737
 1921654412462
 Gameboard.xaml;MainMenu.xaml;OptionsMenu.xaml;
 
