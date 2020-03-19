@@ -18,7 +18,6 @@ namespace MinMaxToe {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        private const Visibility collapsed = Visibility.Collapsed;
 
         public MainWindow() {
             InitializeComponent();
@@ -33,8 +32,7 @@ namespace MinMaxToe {
         }
 
         private void Options_Click(object sender, RoutedEventArgs e) {
-            MenuGrid.IsEnabled = false;
-            MenuGrid.Visibility = collapsed;
+
         }
     }
 }

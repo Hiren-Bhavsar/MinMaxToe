@@ -7,7 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Gameboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OptionsMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Gameboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OptionsMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

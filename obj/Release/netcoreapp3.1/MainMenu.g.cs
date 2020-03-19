@@ -85,7 +85,7 @@ namespace MinMaxToe {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MinMaxToe;component/mainmenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MinMaxToe_s2yd5xdq_wpftmp;component/mainmenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
