@@ -21,3 +21,4 @@ C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MainMenu.baml
 C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\OptionsMenu.baml
 C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.csproj.CoreCompileInputs.cache
 C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.genruntimeconfig.cache
+C:\Users\bhavs\source\repos\MinMaxToe\obj\Debug\netcoreapp3.1\App.baml

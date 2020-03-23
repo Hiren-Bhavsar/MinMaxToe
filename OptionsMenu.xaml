@@ -8,6 +8,7 @@
         WindowStartupLocation="CenterScreen"
         Background="#30343F"
         Title="OptionsMenu" Height="500" Width="350"
+        Closing="Window_Closing"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
         <!-- Default LinearGradientBrush commented out  -->
@@ -255,7 +256,7 @@
             <ComboBoxItem Content="Hard"/>
         </ComboBox>
 
-        <Button x:Name="MainMenu" Content="Main Menu" Grid.Row="4" 
+        <Button x:Name="OptionsClose" Content="Close" Grid.Row="4" 
                 HorizontalAlignment="Center" 
                 HorizontalContentAlignment="Center"
                 VerticalAlignment="Center" 
@@ -265,7 +266,8 @@
                 BorderThickness="0,2"
                 BorderBrush="#12CAD6"
                 Foreground="#FA163F"
-                Background="#30343F"/>
+                Background="#30343F"
+                Click="OptionsClose_Click"/>
 
     </Grid>
 </Window>

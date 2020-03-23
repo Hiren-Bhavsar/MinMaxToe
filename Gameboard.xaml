@@ -6,9 +6,182 @@
         xmlns:local="clr-namespace:MinMaxToe"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing"
         Background="#30343F"
         Title="Gameboard" Height="500" Width="350">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="gamelabel" Content="MinMaxToe"
+               Grid.Row="0"
+               Grid.Column="1"
+               HorizontalAlignment="Center" 
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" 
+               FontSize="19" FontWeight="DemiBold"
+               BorderBrush="#12CAD6"
+               BorderThickness="0,2,0,2"
+               Foreground="#FA163F"/>
+
+        <Label x:Name="playerOnePoints" Content="P1: 0"
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center" 
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" 
+               FontSize="20" FontWeight="DemiBold"
+               BorderBrush="#12CAD6"
+               BorderThickness="0,2,0,2"
+               Foreground="#FA163F"/>
+
+        <Label x:Name="playerTwoPoints" Content="P2: 0"
+               Grid.Row="0"
+               Grid.Column="2"
+               HorizontalAlignment="Center" 
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" 
+               FontSize="20" FontWeight="DemiBold"
+               BorderBrush="#12CAD6"
+               BorderThickness="0,2,0,2"
+               Foreground="#FA163F"/>
+
+        <Button x:Name="button0" Content=""
+               Grid.Row="1" Grid.Column="0"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="0,0,2,2"
+               Margin="5,5,0,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button1" Content=""
+               Grid.Row="1" Grid.Column="1"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,0,2,2"
+               Margin="0,5,0,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button2" Content=""
+               Grid.Row="1" Grid.Column="2"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,0,0,2"
+               Margin="0,5,5,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button3" Content=""
+               Grid.Row="2" Grid.Column="0"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="0,2,2,2"
+               Margin="5,0,0,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button4" Content=""
+               Grid.Row="2" Grid.Column="1"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,2,2,2"
+               Margin="0,0,0,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button5" Content=""
+               Grid.Row="2" Grid.Column="2"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,2,0,2"
+               Margin="0,0,5,0"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button6" Content=""
+               Grid.Row="3" Grid.Column="0"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="0,2,2,0"
+               Margin="5,0,0,5"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button7" Content=""
+               Grid.Row="3" Grid.Column="1"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,2,2,0"
+               Margin="0,0,0,5"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="button8" Content=""
+               Grid.Row="3" Grid.Column="2"
+               HorizontalContentAlignment="Center"
+               FontSize="40" FontWeight="DemiBold"
+               BorderBrush="GhostWhite"
+               BorderThickness="2,2,0,0"
+               Margin="0,0,5,5"
+               Foreground="#FA163F"
+               Background="#30343F"
+               Click="Game_Click"/>
+
+        <Button x:Name="Reset" Content="Reset" 
+                Grid.Row="4" Grid.Column="0" 
+                HorizontalAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                VerticalAlignment="Center" 
+                Height="40" Width="85" 
+                FontSize="20" 
+                FontWeight="DemiBold"
+                BorderThickness="0,2"
+                BorderBrush="#12CAD6"
+                Foreground="#FA163F"
+                Background="#30343F"
+                Click="Reset_Click"/>
+
+        <Button x:Name="MainMenu" Content="Menu" 
+                Grid.Row="4" Grid.Column="2" 
+                HorizontalAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                VerticalAlignment="Center" 
+                Height="40" Width="85" 
+                FontSize="20" 
+                FontWeight="DemiBold"
+                BorderThickness="0,2"
+                BorderBrush="#12CAD6"
+                Foreground="#FA163F"
+                Background="#30343F"
+                Click="MainMenu_Click"/>
+
     </Grid>
 </Window>

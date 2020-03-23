@@ -18,5 +18,14 @@ namespace MinMaxToe {
         public OptionsMenu() {
             InitializeComponent();
         }
+
+        private void OptionsClose_Click(object sender, RoutedEventArgs e) {
+            this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+            e.Cancel = true;
+            this.Hide();
+        }
     }
 }
