@@ -18,10 +18,10 @@ namespace MinMaxToe {
     public partial class Gameboard : Window {
 
         private bool isPlayerOneTurn, AIPlayerEnabled, isAITurn;
-        private SolidColorBrush playerOneColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FA163F"));
-        private SolidColorBrush playerTwoColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#12CAD6"));
-        private SolidColorBrush highlightColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#495060"));
-        private SolidColorBrush backgroundColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#30343F"));
+        private readonly SolidColorBrush playerOneColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FA163F"));
+        private readonly SolidColorBrush playerTwoColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#12CAD6"));
+        private readonly SolidColorBrush highlightColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#495060"));
+        private readonly SolidColorBrush backgroundColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#30343F"));
         private Button[] buttonBoard;
         private int p1Points = 0, p2Points = 0;
 
@@ -55,14 +55,31 @@ namespace MinMaxToe {
                     temp.Foreground = playerTwoColor;
                     temp.Content = "O";
                 }
+
                 CheckWin();
                 SwitchPlayer();
             }
         }
 
+        private String[] GetStringBoard() {
+            String[] stringBorard = new string[9];
+
+            for (int x = 0; x< 9; x++) {
+                if (buttonBoard[x].Content.Equals("")) {
+                    stringBorard[x] = "-";
+                }else if (buttonBoard[x].Content.Equals("X")) {
+                    stringBorard[x] = "X";
+                }else if (buttonBoard[x].Content.Equals("O")) {
+                    stringBorard[x] = "O";
+                }
+            }
+
+            return stringBorard;
+        }
+
         private MinMaxAI miniMax = new MinMaxAI();
         private void AI_Turn() {
-            int testTemp = miniMax.testMove();
+            int testTemp = miniMax.RandomMove(GetStringBoard());
 
             if (buttonBoard[testTemp].Content.Equals("")) {
                 buttonBoard[testTemp].Foreground = playerTwoColor;
