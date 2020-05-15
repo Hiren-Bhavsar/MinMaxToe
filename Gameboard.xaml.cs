@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,15 +17,18 @@ namespace MinMaxToe {
     /// </summary>
     public partial class Gameboard : Window {
 
-        private bool isPlayerOneTurn;
+        private bool isPlayerOneTurn, AIPlayerEnabled, isAITurn;
         private SolidColorBrush playerOneColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FA163F"));
         private SolidColorBrush playerTwoColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#12CAD6"));
+        private SolidColorBrush highlightColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#495060"));
+        private SolidColorBrush backgroundColor = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#30343F"));
         private Button[] buttonBoard;
         private int p1Points = 0, p2Points = 0;
 
-        public Gameboard() {
+        public Gameboard(bool enableAI) {
             isPlayerOneTurn = true;
-
+            AIPlayerEnabled = enableAI;
+            isAITurn = false;
             InitializeComponent();
 
             buttonBoard = new Button[] { button0, button1, button2, button3, button4, button5, button6, button7, button8 };
@@ -33,7 +37,7 @@ namespace MinMaxToe {
 
         private void MainMenu_Click(object sender, RoutedEventArgs e) {
             ResetGame();
-            this.Hide();
+            this.Close();
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e) {
@@ -42,7 +46,8 @@ namespace MinMaxToe {
 
         private void Game_Click(object sender, RoutedEventArgs e) {
             Button temp = (Button)sender;
-            if (temp.Content.Equals("")) {
+            // Check that it is not the AI Player's turn and that the position has not yet been played.
+            if (!isAITurn && temp.Content.Equals("")) {
                 if (isPlayerOneTurn) {
                     temp.Foreground = playerOneColor;
                     temp.Content = "X";
@@ -50,9 +55,22 @@ namespace MinMaxToe {
                     temp.Foreground = playerTwoColor;
                     temp.Content = "O";
                 }
-                SwitchPlayer();
                 CheckWin();
+                SwitchPlayer();
             }
+        }
+
+        private MinMaxAI miniMax = new MinMaxAI();
+        private void AI_Turn() {
+            int testTemp = miniMax.testMove();
+
+            if (buttonBoard[testTemp].Content.Equals("")) {
+                buttonBoard[testTemp].Foreground = playerTwoColor;
+                buttonBoard[testTemp].Content = "O";
+            }
+            CheckWin();
+            isAITurn = false;
+            SwitchPlayer();
         }
 
         private void ResetGame() {
@@ -70,7 +88,24 @@ namespace MinMaxToe {
 
 
         private void SwitchPlayer() {
+            //Normal Player Toggle
             isPlayerOneTurn = !isPlayerOneTurn;
+
+            //Adjust Background Highlight
+            if (isPlayerOneTurn) {
+                playerOnePoints.Background = highlightColor;
+                playerTwoPoints.Background = backgroundColor;
+            } else {
+                playerOnePoints.Background = backgroundColor;
+                playerTwoPoints.Background = highlightColor;
+            }
+
+
+            //Switch to AI Player if Enabled
+            if (AIPlayerEnabled && !isPlayerOneTurn) {
+                isAITurn = true;
+                AI_Turn();
+            }
         }
 
         private void CheckWin() {
@@ -116,6 +151,17 @@ namespace MinMaxToe {
                     ResetBoard();
                 }
             }
+
+            //Check for Tie, No Points Awarded
+            String tieCheck = "";
+            foreach (Button temp in buttonBoard) {
+                tieCheck += temp.Content;
+            }
+            if (tieCheck.Length == 9) {
+                GenerateMessageBox("The Game Has Ended In A Tie!", "Tie Game!");
+                ResetBoard();
+            }
+
         }
 
         private void UpdatePoints(string winner) {

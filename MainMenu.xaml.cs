@@ -20,7 +20,7 @@ namespace MinMaxToe {
     public partial class MainWindow : Window {
 
         private OptionsMenu optionsMenu = new OptionsMenu();
-        private Gameboard gameBoard = new Gameboard();
+        private Gameboard gameBoard;
 
         public MainWindow() {
             InitializeComponent();
@@ -28,11 +28,13 @@ namespace MinMaxToe {
         }
 
         private void PVP_Click(object sender, RoutedEventArgs e) {
+            gameBoard = new Gameboard(false);
             gameBoard.Show();
         }
 
         private void PVAI_Click(object sender, RoutedEventArgs e) {
-
+            gameBoard = new Gameboard(true);
+            gameBoard.Show();
         }
 
         private void Options_Click(object sender, RoutedEventArgs e) {

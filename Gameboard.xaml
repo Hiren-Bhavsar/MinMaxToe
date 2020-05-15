@@ -43,6 +43,7 @@
                FontSize="20" FontWeight="DemiBold"
                BorderBrush="#12CAD6"
                BorderThickness="0,2,0,2"
+               Background="#495060"
                Foreground="#FA163F"/>
 
         <Label x:Name="playerTwoPoints" Content="P2: 0"
