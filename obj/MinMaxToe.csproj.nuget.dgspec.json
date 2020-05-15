@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bhavs\\source\\repos\\MinMaxToe\\MinMaxToe.csproj": {}
+    "C:\\Users\\bhavs\\Documents\\GitHub\\MinMaxToe\\MinMaxToe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bhavs\\source\\repos\\MinMaxToe\\MinMaxToe.csproj": {
+    "C:\\Users\\bhavs\\Documents\\GitHub\\MinMaxToe\\MinMaxToe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bhavs\\source\\repos\\MinMaxToe\\MinMaxToe.csproj",
+        "projectUniqueName": "C:\\Users\\bhavs\\Documents\\GitHub\\MinMaxToe\\MinMaxToe.csproj",
         "projectName": "MinMaxToe",
-        "projectPath": "C:\\Users\\bhavs\\source\\repos\\MinMaxToe\\MinMaxToe.csproj",
+        "projectPath": "C:\\Users\\bhavs\\Documents\\GitHub\\MinMaxToe\\MinMaxToe.csproj",
         "packagesPath": "C:\\Users\\bhavs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bhavs\\source\\repos\\MinMaxToe\\obj\\",
+        "outputPath": "C:\\Users\\bhavs\\Documents\\GitHub\\MinMaxToe\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\bhavs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

@@ -45,7 +45,8 @@ namespace MinMaxToe {
                 if (!(content1.Equals("")) && content1.Equals(content2) && content1.Equals(content3)) {
                     if (content1.Equals("O")) {
                         return 10;
-                    } else if (content1.Equals("X")) {
+                    }
+                    else if (content1.Equals("X")) {
                         return -10;
                     }
                 }
@@ -60,7 +61,8 @@ namespace MinMaxToe {
                 if (!(content1.Equals("")) && content1.Equals(content2) && content1.Equals(content3)) {
                     if (content1.Equals("O")) {
                         return 10;
-                    } else if (content1.Equals("X")) {
+                    }
+                    else if (content1.Equals("X")) {
                         return -10;
                     }
                 }
@@ -71,7 +73,8 @@ namespace MinMaxToe {
                 if (board[0].Equals(board[4]) && board[0].Equals(board[8])) {
                     if (board[0].Equals("O")) {
                         return 10;
-                    } else if (board[0].Equals("X")) {
+                    }
+                    else if (board[0].Equals("X")) {
                         return -10;
                     }
                 }
@@ -81,13 +84,66 @@ namespace MinMaxToe {
                 if (board[2].Equals(board[4]) && board[2].Equals(board[6])) {
                     if (board[2].Equals("O")) {
                         return 10;
-                    } else if (board[2].Equals("X")) {
+                    }
+                    else if (board[2].Equals("X")) {
                         return -10;
                     }
                 }
             }
-
             return 0;
+        }
+
+        private int minimax(String[] board, int depth, bool isMaximizer) {
+            int score = EvaluateBoard(board);
+
+            if (score == 10 || score == -10) {
+                return score;
+            }
+
+            if (IsBoardFull(board)) {
+                return 0;
+            }
+
+            if (isMaximizer) {
+                int best = int.MinValue;
+                for (int x = 0; x < board.Length; x++) {
+                    if (board[x].Equals("-")) {
+                        board[x] = "O";
+                        best = Math.Max(best, minimax(board, depth + 1, !isMaximizer));
+                        board[x] = "-";
+                    }
+                }
+                return best;
+            }
+            else {
+                int best = int.MaxValue;
+                for (int x = 0; x < board.Length; x++) {
+                    if (board[x].Equals("-")) {
+                        board[x] = "X";
+                        best = Math.Min(best, minimax(board, depth + 1, !isMaximizer));
+                        board[x] = "-";
+                    }
+                }
+                return best;
+            }
+        }
+
+        public int FindBestMove(String[] board) {
+            int bestValue = int.MinValue;
+            int bestMove = -1;
+            for (int x = 0; x < board.Length; x++) {
+                if (board[x].Equals("-")) {
+                    board[x] = "O";
+                    int tempValue = minimax(board, 0, false);
+                    board[x] = "-";
+                    if (tempValue > bestValue) {
+                        bestValue = tempValue;
+                        bestMove = x;
+                    }
+                }
+            }
+
+            return bestMove;
         }
 
     }

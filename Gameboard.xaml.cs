@@ -79,7 +79,7 @@ namespace MinMaxToe {
 
         private MinMaxAI miniMax = new MinMaxAI();
         private void AI_Turn() {
-            int testTemp = miniMax.RandomMove(GetStringBoard());
+            int testTemp = miniMax.FindBestMove(GetStringBoard());
 
             if (buttonBoard[testTemp].Content.Equals("")) {
                 buttonBoard[testTemp].Foreground = playerTwoColor;
