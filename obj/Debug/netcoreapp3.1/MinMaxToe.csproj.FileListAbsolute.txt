@@ -28,7 +28,6 @@ C:\Users\bhavs\Documents\GitHub\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.runt
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.runtimeconfig.dev.json
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.dll
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\bin\Debug\netcoreapp3.1\MinMaxToe.pdb
-C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.csprojAssemblyReference.cache
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\Gameboard.g.cs
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MainMenu.g.cs
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\OptionsMenu.g.cs
@@ -46,3 +45,5 @@ C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.Asse
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.dll
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.pdb
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.genruntimeconfig.cache
+C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.csproj.AssemblyReference.cache
+C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\MinMaxToe.GeneratedMSBuildEditorConfig.editorconfig

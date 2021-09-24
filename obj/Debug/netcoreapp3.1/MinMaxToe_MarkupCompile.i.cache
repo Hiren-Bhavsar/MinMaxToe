@@ -1,5 +1,5 @@
 ﻿MinMaxToe
-
+1.0.0.0
 
 winexe
 C#
@@ -8,12 +8,12 @@ C:\Users\bhavs\Documents\GitHub\MinMaxToe\obj\Debug\netcoreapp3.1\
 MinMaxToe
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\bhavs\Documents\GitHub\MinMaxToe\App.xaml
-3-1835703300
+3-1056319306
 
-7853092142
-1921654412462
+8-561644014
+192-1533232326
 Gameboard.xaml;MainMenu.xaml;OptionsMenu.xaml;
 
 False
